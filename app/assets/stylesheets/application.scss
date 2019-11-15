@@ -5,7 +5,8 @@
  @import "./config/reset";
  @import "./mixins/vendor_prefix";
  @import "./modules/main_chat";
+ @import "./modules/flash";
  @import "./modules/side_bar";
  @import "./modules/user";
- @import "./messages/messages";
- @import "./modules/flash"
+ @import "./modules/group";
+ @import "./messages/messages"
