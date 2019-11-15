@@ -32,6 +32,10 @@
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
+      .grouplink{
+        text-decoration: none;
+        color: $white;
+      }
       &__name {
         font-size: $side_group_name;
       }
