@@ -1,6 +1,5 @@
 $(function(){
   last_message_id = $('.message:last').data("message-id");
-  console.log(last_message_id);
 
   function buildHTML(message){
     image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
@@ -47,7 +46,7 @@ $(function(){
     });
    return false;
   });
-  
+
   var reloadMessages = function() {
     last_message_id = $('.message:last').data("message-id");
     $.ajax({
