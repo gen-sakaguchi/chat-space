@@ -1,5 +1,4 @@
 $(function(){
-  last_message_id = $('.message:last').data("message-id");
 
   function buildHTML(message){
     image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
