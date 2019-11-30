@@ -22,7 +22,7 @@ $(function(){
         return html;
   };
 
-  $('.js-form').on('submit', function(e){
+  $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -63,6 +63,7 @@ $(function(){
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
     })
+
     .fail(function() {
       alert('自動更新に失敗しました');
     });
