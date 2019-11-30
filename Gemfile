@@ -62,6 +62,7 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
+gem 'nokogiri'
 
 group :production do
   gem 'unicorn', '5.4.1'
