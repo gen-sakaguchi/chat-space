@@ -43,7 +43,9 @@ $(function(){
    .fail(function(){
      alert("メッセージ送信に失敗しました");
     });
-   return false;
+    .always(function(data){
+      $('.form__submit').prop('disabled', false);//ここで解除している
+    })
   });
 
   var reloadMessages = function() {
@@ -62,9 +64,10 @@ $(function(){
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
     })
+
     .fail(function() {
       alert('自動更新に失敗しました');
     });
     }
   setInterval(reloadMessages, 5000);
- });
+});
