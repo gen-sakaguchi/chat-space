@@ -43,7 +43,7 @@ $(function(){
    .fail(function(){
      alert("メッセージ送信に失敗しました");
     });
-    .always(function(data){
+    always(function(data){
       $('.form__submit').prop('disabled', false);//ここで解除している
     })
   });
