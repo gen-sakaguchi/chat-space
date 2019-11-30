@@ -43,13 +43,12 @@ $(function(){
    .fail(function(){
      alert("メッセージ送信に失敗しました");
     });
-    always(function(data){
-      $('.form__submit').prop('disabled', false);//ここで解除している
-    })
+   return false;
   });
 
   var reloadMessages = function() {
-    last_message_id = $('.message:last').data("message-id");
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      last_message_id = $('.message:last').data("message-id");
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -64,10 +63,10 @@ $(function(){
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
     })
-
     .fail(function() {
       alert('自動更新に失敗しました');
     });
     }
+  };
   setInterval(reloadMessages, 5000);
 });
