@@ -14,7 +14,7 @@
     }
     &__lists {
       display: inline-block;
-      padding-left: 120px;
+      float: right;
       .list {
         display: inline-block;
       }
@@ -29,7 +29,6 @@
     background-color: $side_blue_light;
     height: calc(100VH - 100px);
     padding: 0 20px;
-    overflow: scroll;
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
